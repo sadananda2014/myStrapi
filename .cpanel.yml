@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/example/public_html/backend
+    - export DEPLOYPATH=/public_html/backend
     - /bin/cp -R images $DEPLOYPATH
     - npm install --force 
     - npm run build 
