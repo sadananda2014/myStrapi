@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "presses",
+  "info": {
+    "singularName": "press",
+    "pluralName": "presses",
+    "displayName": "press"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "press_id": {
+      "type": "biginteger",
+      "required": true
+    },
+    "order_number": {
+      "type": "biginteger",
+      "required": true
+    },
+    "comp_members_id": {
+      "type": "integer",
+      "required": true
+    },
+    "dropfront": {
+      "type": "text",
+      "required": true
+    },
+    "pressfront": {
+      "type": "text",
+      "required": true
+    },
+    "dropback": {
+      "type": "text"
+    },
+    "pressback": {
+      "type": "text",
+      "required": true
+    },
+    "pressnumber": {
+      "type": "string"
+    },
+    "pressnetsheet": {
+      "type": "string"
+    },
+    "pressover": {
+      "type": "string"
+    },
+    "presstotalsheet": {
+      "type": "text",
+      "required": true
+    },
+    "pressfinishedcount": {
+      "type": "string"
+    },
+    "pressform": {
+      "type": "string"
+    },
+    "pressnote": {
+      "type": "string"
+    },
+    "press_status": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}

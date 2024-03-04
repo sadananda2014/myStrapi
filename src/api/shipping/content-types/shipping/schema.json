@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shippings",
+  "info": {
+    "singularName": "shipping",
+    "pluralName": "shippings",
+    "displayName": "shipping",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "order_number": {
+      "type": "integer"
+    },
+    "company_member_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company-member.company-member"
+    },
+    "shipto": {
+      "type": "string"
+    },
+    "shipaddress": {
+      "type": "text"
+    },
+    "shipcity": {
+      "type": "string"
+    },
+    "shipstate": {
+      "type": "string"
+    },
+    "shipzipcode": {
+      "type": "integer"
+    },
+    "shipphone": {
+      "type": "biginteger"
+    },
+    "shipmobile": {
+      "type": "biginteger"
+    },
+    "shipfax": {
+      "type": "string"
+    },
+    "shipemail": {
+      "type": "string"
+    },
+    "shipcontact": {
+      "type": "string"
+    },
+    "shipwillcall": {
+      "type": "string"
+    },
+    "shipsample": {
+      "type": "string"
+    },
+    "shipping_status": {
+      "type": "boolean"
+    },
+    "shipping_inv_ids": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::shippinginvoice.shippinginvoice"
+    }
+  }
+}

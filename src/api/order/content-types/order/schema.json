@@ -1,0 +1,150 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "order"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "orders_id": {
+      "type": "integer"
+    },
+    "order_number": {
+      "type": "biginteger"
+    },
+    "comp_members_id": {
+      "type": "integer"
+    },
+    "contact": {
+      "type": "text"
+    },
+    "soldto": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "zipcode": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "mobile": {
+      "type": "string"
+    },
+    "fax": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "jobnumber": {
+      "type": "string"
+    },
+    "orderdate": {
+      "type": "string"
+    },
+    "ordership": {
+      "type": "string"
+    },
+    "orderdue": {
+      "type": "string"
+    },
+    "customerordernumber": {
+      "type": "string"
+    },
+    "pj": {
+      "type": "string"
+    },
+    "quotenumber": {
+      "type": "string"
+    },
+    "stockin": {
+      "type": "string"
+    },
+    "specialinstruction": {
+      "type": "string"
+    },
+    "extra": {
+      "type": "text"
+    },
+    "items": {
+      "type": "string"
+    },
+    "prepressinstruction": {
+      "type": "string"
+    },
+    "prepressacs": {
+      "type": "string"
+    },
+    "prepresssupplied": {
+      "type": "string"
+    },
+    "presstrimsize": {
+      "type": "string"
+    },
+    "order_status": {
+      "type": "boolean"
+    },
+    "prepress_status": {
+      "type": "boolean"
+    },
+    "press240_status": {
+      "type": "boolean"
+    },
+    "press528_status": {
+      "type": "boolean"
+    },
+    "press540_status": {
+      "type": "boolean"
+    },
+    "bindery_status": {
+      "type": "boolean"
+    },
+    "invoice_status": {
+      "type": "boolean"
+    },
+    "billing_status": {
+      "type": "boolean"
+    },
+    "prepresspriority": {
+      "type": "integer"
+    },
+    "priority240": {
+      "type": "integer"
+    },
+    "priority528": {
+      "type": "integer"
+    },
+    "priority540": {
+      "type": "integer"
+    },
+    "binderypriority": {
+      "type": "integer"
+    },
+    "shippingpriority": {
+      "type": "integer"
+    },
+    "invoicepriority": {
+      "type": "integer"
+    },
+    "billingpriority": {
+      "type": "integer"
+    },
+    "shipping_status": {
+      "type": "integer"
+    }
+  }
+}

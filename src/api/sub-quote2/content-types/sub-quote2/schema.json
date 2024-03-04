@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sub_quote2s",
+  "info": {
+    "singularName": "sub-quote2",
+    "pluralName": "sub-quote2s",
+    "displayName": "sub_quote2"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "quote_number": {
+      "type": "integer"
+    },
+    "comp_members_id": {
+      "type": "integer"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "price": {
+      "type": "biginteger"
+    },
+    "text": {
+      "type": "string"
+    },
+    "textcover": {
+      "type": "string"
+    },
+    "sub_quote2_status": {
+      "type": "string"
+    }
+  }
+}

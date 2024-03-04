@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "binderies",
+  "info": {
+    "singularName": "bindery",
+    "pluralName": "binderies",
+    "displayName": "bindery",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bindery_id": {
+      "type": "biginteger",
+      "required": true,
+      "unique": true
+    },
+    "order_number": {
+      "type": "biginteger",
+      "required": true
+    },
+    "fld1": {
+      "type": "text",
+      "required": true
+    },
+    "bindery_status": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "comp_members_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company-member.company-member"
+    }
+  }
+}
