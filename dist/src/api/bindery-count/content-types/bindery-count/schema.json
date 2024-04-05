@@ -1,0 +1,37 @@
+{
+    "kind": "collectionType",
+    "collectionName": "bindery_counts",
+    "info": {
+        "singularName": "bindery-count",
+        "pluralName": "bindery-counts",
+        "displayName": "bindery_count"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "bindery_count_id": {
+            "required": true,
+            "default": 0,
+            "type": "integer"
+        },
+        "order_number": {
+            "type": "biginteger",
+            "required": true
+        },
+        "comp_members_id": {
+            "type": "biginteger",
+            "required": true
+        },
+        "binderycount": {
+            "type": "text",
+            "required": true
+        },
+        "bindery_count_status": {
+            "type": "boolean",
+            "default": true,
+            "required": true
+        }
+    }
+}

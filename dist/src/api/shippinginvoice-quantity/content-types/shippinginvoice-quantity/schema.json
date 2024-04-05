@@ -1,0 +1,36 @@
+{
+    "kind": "collectionType",
+    "collectionName": "shippinginvoice_quantities",
+    "info": {
+        "singularName": "shippinginvoice-quantity",
+        "pluralName": "shippinginvoice-quantities",
+        "displayName": "shippinginvoice_quantity"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "order_number": {
+            "type": "integer"
+        },
+        "comp_members_id": {
+            "type": "integer"
+        },
+        "shipping_id": {
+            "type": "integer"
+        },
+        "ordered": {
+            "type": "string"
+        },
+        "shipped": {
+            "type": "string"
+        },
+        "cartons": {
+            "type": "string"
+        },
+        "status": {
+            "type": "string"
+        }
+    }
+}

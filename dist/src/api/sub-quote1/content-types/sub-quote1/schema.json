@@ -1,0 +1,42 @@
+{
+    "kind": "collectionType",
+    "collectionName": "sub_quote1s",
+    "info": {
+        "singularName": "sub-quote1",
+        "pluralName": "sub-quote1s",
+        "displayName": "sub_quote1"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "quote_number": {
+            "type": "integer"
+        },
+        "comp_members_id": {
+            "type": "integer"
+        },
+        "ink": {
+            "type": "string"
+        },
+        "black": {
+            "type": "string"
+        },
+        "process": {
+            "type": "string"
+        },
+        "pms": {
+            "type": "string"
+        },
+        "aqu": {
+            "type": "string"
+        },
+        "var": {
+            "type": "string"
+        },
+        "sub_quote_status": {
+            "type": "string"
+        }
+    }
+}

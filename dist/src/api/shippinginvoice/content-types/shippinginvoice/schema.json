@@ -1,0 +1,96 @@
+{
+    "kind": "collectionType",
+    "collectionName": "shippinginvoices",
+    "info": {
+        "singularName": "shippinginvoice",
+        "pluralName": "shippinginvoices",
+        "displayName": "shippinginvoice"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "order_number": {
+            "type": "integer"
+        },
+        "comp_members_id": {
+            "type": "integer"
+        },
+        "shipping_id": {
+            "type": "integer"
+        },
+        "jobnumber": {
+            "type": "string"
+        },
+        "customer": {
+            "type": "string"
+        },
+        "address": {
+            "type": "text"
+        },
+        "city": {
+            "type": "string"
+        },
+        "state": {
+            "type": "string"
+        },
+        "zipcode": {
+            "type": "string"
+        },
+        "phone": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string"
+        },
+        "contact": {
+            "type": "string"
+        },
+        "shipto": {
+            "type": "string"
+        },
+        "shipaddress": {
+            "type": "string"
+        },
+        "shipcity": {
+            "type": "string"
+        },
+        "shipstate": {
+            "type": "string"
+        },
+        "shipzipcode": {
+            "type": "string"
+        },
+        "shipphone": {
+            "type": "string"
+        },
+        "shipemail": {
+            "type": "string"
+        },
+        "shipdescription": {
+            "type": "text"
+        },
+        "shipreturn": {
+            "type": "string"
+        },
+        "returndescription": {
+            "type": "string"
+        },
+        "shipvia": {
+            "type": "string"
+        },
+        "viadescription": {
+            "type": "text"
+        },
+        "receivedby": {
+            "type": "string"
+        },
+        "datereceived": {
+            "type": "string"
+        },
+        "status": {
+            "type": "string"
+        }
+    }
+}

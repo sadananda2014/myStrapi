@@ -1,0 +1,32 @@
+{
+    "kind": "collectionType",
+    "collectionName": "vendors",
+    "info": {
+        "singularName": "vendor",
+        "pluralName": "vendors",
+        "displayName": "vendor"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "vendor_id": {
+            "type": "integer",
+            "required": true,
+            "unique": true
+        },
+        "order_number": {
+            "type": "integer"
+        },
+        "vendorname": {
+            "type": "string"
+        },
+        "vendorprice": {
+            "type": "string"
+        },
+        "vendor_status": {
+            "type": "boolean"
+        }
+    }
+}

@@ -1,0 +1,163 @@
+{
+    "kind": "collectionType",
+    "collectionName": "quotes",
+    "info": {
+        "singularName": "quote",
+        "pluralName": "quotes",
+        "displayName": "quote"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "quote_id": {
+            "type": "biginteger",
+            "required": true,
+            "unique": true
+        },
+        "quote_number": {
+            "type": "biginteger"
+        },
+        "comp_members_id": {
+            "type": "integer"
+        },
+        "quoter": {
+            "type": "string"
+        },
+        "thedate": {
+            "type": "string"
+        },
+        "thetime": {
+            "type": "string"
+        },
+        "company": {
+            "type": "string"
+        },
+        "contact": {
+            "type": "string"
+        },
+        "address": {
+            "type": "text"
+        },
+        "city": {
+            "type": "text"
+        },
+        "state": {
+            "type": "string"
+        },
+        "zipcode": {
+            "type": "text"
+        },
+        "phone": {
+            "type": "string"
+        },
+        "mobile": {
+            "type": "string"
+        },
+        "fax": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string"
+        },
+        "description": {
+            "type": "text"
+        },
+        "coverage": {
+            "type": "string"
+        },
+        "bleed": {
+            "type": "string"
+        },
+        "side": {
+            "type": "string"
+        },
+        "flat": {
+            "type": "string"
+        },
+        "finishedsize": {
+            "type": "string"
+        },
+        "page": {
+            "type": "string"
+        },
+        "pluscover": {
+            "type": "string"
+        },
+        "selfcover": {
+            "type": "string"
+        },
+        "art": {
+            "type": "string"
+        },
+        "artdescription": {
+            "type": "text"
+        },
+        "tradeline": {
+            "type": "string"
+        },
+        "tradecolor": {
+            "type": "string"
+        },
+        "suppliedline": {
+            "type": "string"
+        },
+        "suppliedcolor": {
+            "type": "string"
+        },
+        "stocktext": {
+            "type": "string"
+        },
+        "stockcover": {
+            "type": "string"
+        },
+        "stocksupplied": {
+            "type": "string"
+        },
+        "cut": {
+            "type": "string"
+        },
+        "score": {
+            "type": "string"
+        },
+        "perf": {
+            "type": "string"
+        },
+        "fold": {
+            "type": "text"
+        },
+        "stitch": {
+            "type": "string"
+        },
+        "otherbindery": {
+            "type": "string"
+        },
+        "packaging": {
+            "type": "string"
+        },
+        "packagingdescription": {
+            "type": "text"
+        },
+        "otherpackaging": {
+            "type": "string"
+        },
+        "delivery": {
+            "type": "string"
+        },
+        "deliverydescription": {
+            "type": "string"
+        },
+        "stocksizetext": {
+            "type": "string"
+        },
+        "stocksizecover": {
+            "type": "string"
+        },
+        "quote_status": {
+            "type": "boolean",
+            "default": true,
+            "required": false
+        }
+    }
+}

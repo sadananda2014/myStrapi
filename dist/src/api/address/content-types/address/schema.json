@@ -1,0 +1,45 @@
+{
+    "kind": "collectionType",
+    "collectionName": "addresses",
+    "info": {
+        "singularName": "address",
+        "pluralName": "addresses",
+        "displayName": "address"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "line1": {
+            "type": "text"
+        },
+        "line2": {
+            "type": "string"
+        },
+        "city": {
+            "type": "string"
+        },
+        "state": {
+            "type": "string"
+        },
+        "zipcode": {
+            "type": "string"
+        },
+        "phone1": {
+            "type": "biginteger"
+        },
+        "phone2": {
+            "type": "biginteger"
+        },
+        "user": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "admin::user"
+        },
+        "type": {
+            "type": "string",
+            "required": true
+        }
+    }
+}
