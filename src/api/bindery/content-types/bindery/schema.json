@@ -29,11 +29,6 @@
       "type": "boolean",
       "default": true,
       "required": true
-    },
-    "comp_members_id": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::company-member.company-member"
     }
   }
 }

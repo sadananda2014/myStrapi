@@ -15,11 +15,6 @@
     "order_number": {
       "type": "integer"
     },
-    "company_member_id": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::company-member.company-member"
-    },
     "shipto": {
       "type": "string"
     },

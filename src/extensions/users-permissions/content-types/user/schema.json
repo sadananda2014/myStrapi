@@ -70,6 +70,15 @@
       "relation": "manyToOne",
       "target": "api::user-role.user-role",
       "inversedBy": "users"
+    },
+    "first_name": {
+      "type": "string",
+      "required": true
+    },
+    "last_name": {
+      "type": "string",
+      "unique": false,
+      "required": true
     }
   }
 }

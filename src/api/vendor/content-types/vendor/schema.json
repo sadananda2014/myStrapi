@@ -27,11 +27,6 @@
     },
     "vendor_status": {
       "type": "boolean"
-    },
-    "company_member_id": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::company-member.company-member"
     }
   }
 }

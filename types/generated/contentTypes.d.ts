@@ -786,6 +786,8 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'manyToOne',
       'api::user-role.user-role'
     >;
+    first_name: Attribute.String & Attribute.Required;
+    last_name: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -796,6 +798,44 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'plugin::users-permissions.user',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiAddressAddress extends Schema.CollectionType {
+  collectionName: 'addresses';
+  info: {
+    singularName: 'address';
+    pluralName: 'addresses';
+    displayName: 'address';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    line1: Attribute.Text;
+    line2: Attribute.String;
+    city: Attribute.String;
+    state: Attribute.String;
+    zipcode: Attribute.String;
+    phone1: Attribute.BigInteger;
+    phone2: Attribute.BigInteger;
+    user: Attribute.Relation<'api::address.address', 'oneToOne', 'admin::user'>;
+    type: Attribute.String & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::address.address',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::address.address',
       'oneToOne',
       'admin::user'
     > &
@@ -821,11 +861,6 @@ export interface ApiBinderyBindery extends Schema.CollectionType {
     bindery_status: Attribute.Boolean &
       Attribute.Required &
       Attribute.DefaultTo<true>;
-    comp_members_id: Attribute.Relation<
-      'api::bindery.bindery',
-      'oneToOne',
-      'api::company-member.company-member'
-    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -875,89 +910,6 @@ export interface ApiBinderyCountBinderyCount extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::bindery-count.bindery-count',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiCompanyMemberCompanyMember extends Schema.CollectionType {
-  collectionName: 'company_members';
-  info: {
-    singularName: 'company-member';
-    pluralName: 'company-members';
-    displayName: 'company_member';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    comp_members_id: Attribute.Integer;
-    comp_members_login: Attribute.String;
-    comp_members_password: Attribute.Password;
-    comp_members_first: Attribute.String;
-    comp_members_last: Attribute.String;
-    comp_members_address: Attribute.Text;
-    comp_members_city: Attribute.String;
-    comp_members_state: Attribute.String;
-    comp_members_zipcode: Attribute.String;
-    comp_members_phone1: Attribute.String;
-    comp_members_phone2: Attribute.String;
-    comp_members_extension: Attribute.String;
-    comp_members_email: Attribute.String;
-    comp_members_notes: Attribute.String;
-    comp_level_id: Attribute.Relation<
-      'api::company-member.company-member',
-      'oneToOne',
-      'api::company-members-level.company-members-level'
-    >;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::company-member.company-member',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::company-member.company-member',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiCompanyMembersLevelCompanyMembersLevel
-  extends Schema.CollectionType {
-  collectionName: 'company_members_levels';
-  info: {
-    singularName: 'company-members-level';
-    pluralName: 'company-members-levels';
-    displayName: 'company_members_level';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    comp_level_id: Attribute.Integer & Attribute.Required & Attribute.Unique;
-    comp_level_name: Attribute.String & Attribute.Required & Attribute.Unique;
-    comp_level_description: Attribute.Text;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::company-members-level.company-members-level',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::company-members-level.company-members-level',
       'oneToOne',
       'admin::user'
     > &
@@ -1175,11 +1127,6 @@ export interface ApiShippingShipping extends Schema.CollectionType {
   };
   attributes: {
     order_number: Attribute.Integer;
-    company_member_id: Attribute.Relation<
-      'api::shipping.shipping',
-      'oneToOne',
-      'api::company-member.company-member'
-    >;
     shipto: Attribute.String;
     shipaddress: Attribute.Text;
     shipcity: Attribute.String;
@@ -1454,29 +1401,6 @@ export interface ApiSubQuote2SubQuote2 extends Schema.CollectionType {
   };
 }
 
-export interface ApiTestTest extends Schema.CollectionType {
-  collectionName: 'tests';
-  info: {
-    singularName: 'test';
-    pluralName: 'tests';
-    displayName: 'test';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    slugTest: Attribute.UID;
-    testTitle: Attribute.Text;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::test.test', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::test.test', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
 export interface ApiUserRoleUserRole extends Schema.CollectionType {
   collectionName: 'user_roles';
   info: {
@@ -1528,11 +1452,6 @@ export interface ApiVendorVendor extends Schema.CollectionType {
     vendorname: Attribute.String;
     vendorprice: Attribute.String;
     vendor_status: Attribute.Boolean;
-    company_member_id: Attribute.Relation<
-      'api::vendor.vendor',
-      'oneToOne',
-      'api::company-member.company-member'
-    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1570,10 +1489,9 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::address.address': ApiAddressAddress;
       'api::bindery.bindery': ApiBinderyBindery;
       'api::bindery-count.bindery-count': ApiBinderyCountBinderyCount;
-      'api::company-member.company-member': ApiCompanyMemberCompanyMember;
-      'api::company-members-level.company-members-level': ApiCompanyMembersLevelCompanyMembersLevel;
       'api::order.order': ApiOrderOrder;
       'api::press.press': ApiPressPress;
       'api::quote.quote': ApiQuoteQuote;
@@ -1584,7 +1502,6 @@ declare module '@strapi/types' {
       'api::stock.stock': ApiStockStock;
       'api::sub-quote1.sub-quote1': ApiSubQuote1SubQuote1;
       'api::sub-quote2.sub-quote2': ApiSubQuote2SubQuote2;
-      'api::test.test': ApiTestTest;
       'api::user-role.user-role': ApiUserRoleUserRole;
       'api::vendor.vendor': ApiVendorVendor;
     }
